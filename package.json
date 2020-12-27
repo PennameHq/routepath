@@ -1,6 +1,6 @@
 {
 	"name": "@penname/routepath",
-	"version": "0.2.0",
+	"version": "0.1.0",
 	"description": "A convenient route class.",
 	"main": "index.js",
 	"scripts": {
