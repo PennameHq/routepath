@@ -1,6 +1,6 @@
 {
 	"name": "@penname/routepath",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Convenient API route interface.",
 	"main": "index.js",
 	"scripts": {
