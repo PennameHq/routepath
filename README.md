@@ -17,6 +17,6 @@ const path = route.buildPath({
 	params: { id: 'abc123' },
 	query: { position: 'middle', ref: 'twitter' },
 })
-console.log(url)
+console.log(path)
 // prints: /article/abc123?position=middle&ref=twitter
 ```
