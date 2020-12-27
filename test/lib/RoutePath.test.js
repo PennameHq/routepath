@@ -92,10 +92,10 @@ describe('RoutePath', () => {
 	describe('#fromSerialized()', () => {
 		it('should create a route path from the provided JSON string', () => {
 			const route = RoutePath.fromSerialized(
-				`{"path": "/user/:id/articles" "baseUrl": "example.com/api/" }`,
+				`{"path": "/user/:id/articles", "baseUrl": "example.com/api/" }`,
 			)
 
-			assert.instanceOf(route, routePath)
+			assert.instanceOf(route, RoutePath)
 			assert.equal(
 				route.buildUrl({
 					params: { id: 'u1cba' },
@@ -111,7 +111,7 @@ describe('RoutePath', () => {
 				baseUrl: 'example.com/api/',
 			})
 
-			assert.instanceOf(route, routePath)
+			assert.instanceOf(route, RoutePath)
 			assert.equal(
 				route.buildUrl({
 					params: { id: 'u1cba' },
