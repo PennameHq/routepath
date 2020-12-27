@@ -88,4 +88,35 @@ describe('RoutePath', () => {
 			)
 		})
 	})
+
+	describe('#fromSerialized()', () => {
+		it('should create a route path from the provided JSON string', () => {
+			const route = RoutePath.fromSerialized(
+				`{"path": "/user/:id/articles" "baseUrl": "example.com/api/" }`,
+			)
+
+			assert.equal(
+				route.buildUrl({
+					params: { id: 'u1cba' },
+					query: { from: 'abc456', limit: 15 },
+				}),
+				'example.com/api/user/u1cba/articles?from=abc456&limit=15',
+			)
+		})
+
+		it('should create a route path from the provided object', () => {
+			const route = RoutePath.fromSerialized({
+				path: '/user/:id/articles',
+				baseUrl: 'example.com/api/',
+			})
+
+			assert.equal(
+				route.buildUrl({
+					params: { id: 'u1cba' },
+					query: { from: 'abc456', limit: 15 },
+				}),
+				'example.com/api/user/u1cba/articles?from=abc456&limit=15',
+			)
+		})
+	})
 })
