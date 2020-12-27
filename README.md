@@ -1,3 +1,5 @@
+`npm install --save @penname/routepath`
+
 # routepath
 
 Convenient API route interface.
