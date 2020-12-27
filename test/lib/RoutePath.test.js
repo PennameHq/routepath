@@ -95,6 +95,7 @@ describe('RoutePath', () => {
 				`{"path": "/user/:id/articles" "baseUrl": "example.com/api/" }`,
 			)
 
+			assert.instanceOf(route, routePath)
 			assert.equal(
 				route.buildUrl({
 					params: { id: 'u1cba' },
@@ -110,6 +111,7 @@ describe('RoutePath', () => {
 				baseUrl: 'example.com/api/',
 			})
 
+			assert.instanceOf(route, routePath)
 			assert.equal(
 				route.buildUrl({
 					params: { id: 'u1cba' },
