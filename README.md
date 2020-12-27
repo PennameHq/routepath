@@ -61,10 +61,11 @@ const route = RoutePath.instance({
 
 const path = route.buildPath({
 	params: { userId: 'u1cba', articleId: 'abc123' },
+	query: { position: 'middle', date: 1609036608349 },
 })
 
 console.log(path)
-// prints: /user/u1cba/article/abc123
+// prints: /user/u1cba/article/abc123?position=middle&date=1609036608349
 ```
 
 # `#fromSerialized()`
