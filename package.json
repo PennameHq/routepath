@@ -1,7 +1,7 @@
 {
 	"name": "@penname/routepath",
 	"version": "0.1.0",
-	"description": "A convenient route class.",
+	"description": "Convenient API route interface.",
 	"main": "index.js",
 	"scripts": {
 		"test": "nyc --reporter=cobertura mocha",
